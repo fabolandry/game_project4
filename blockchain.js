@@ -9,6 +9,7 @@ async function connectMetamask() {
     const balance = await signer.getBalance()
     const convertToEth = 1e18;
     console.log("account's balance in ether:", balance.toString() / convertToEth);
+    document.getElementById('NFTButton').style.display = 'block';
 }
 
 async function claimTokens() {
@@ -19,6 +20,7 @@ async function claimTokens() {
     const runTokenContract = new ethers.Contract(runTokenContractAddress, runTokenContractAbi, provider);
     let convertToWei = 1000000000
     let amountToClaim = window.totalGweiScore * convertToWei
+    window.totalGweiScore = 0
     await runTokenContract.connect(signer).mintTokens(signer.getAddress(), amountToClaim.toString())
     window.location.reload(true)
 } 
@@ -29,6 +31,7 @@ async function claimNFT() {
         "function mint(uint256 amount) public",
     ];
     const nftContract = new ethers.Contract(nftContractAddress, mintContractAbi, provider);
+    window.totalNFTScore = 0
     await nftContract.connect(signer).mint(window.totalNFTScore.toString())
     window.location.reload(true)
 } 
