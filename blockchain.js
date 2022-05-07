@@ -20,7 +20,8 @@ async function claimTokens() {
     let convertToWei = 1000000000
     let amountToClaim = window.totalGweiScore * convertToWei
     await runTokenContract.connect(signer).mintTokens(signer.getAddress(), amountToClaim.toString())
-}
+    window.location.reload(true)
+} 
 
 async function claimNFT() {
     const nftContractAddress = "0x24aCfbf06234A30601D5221592664bbB33f4b7c4";
@@ -29,4 +30,5 @@ async function claimNFT() {
     ];
     const nftContract = new ethers.Contract(nftContractAddress, mintContractAbi, provider);
     await nftContract.connect(signer).mint(window.totalNFTScore.toString())
-}
+    window.location.reload(true)
+} 
