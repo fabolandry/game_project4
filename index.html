@@ -9,7 +9,7 @@
     <script src="script.js" type="module"></script>
 </head>
 <body>
-    <button class="button1" id="NFTButton" onclick="claimNFT()">Claim NFT</button>
+    <button class="button1" onclick="claimNFT()">Claim NFT</button>
     <button class="button2" onclick="claimTokens()">Claim Tokens</button>
     <button class="button3" onclick="connectMetamask()">Connect Wallet</button>
 
@@ -21,6 +21,7 @@
 
     <div class="game" data-game>
         <div class="start-screen" data-start-screen>Press any key to start</div>
+        <div id="user-message"></div>
         <img src="imgs/ground.png" class="ground" data-ground>
         <img src="imgs/ground.png" class="ground" data-ground>
         <img src="imgs/playerStands.png" class="player" data-player>
