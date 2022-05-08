@@ -29,7 +29,7 @@ async function claimTokens() {
         await runTokenContract.connect(signer).mintTokens(signer.getAddress(), amountToClaim.toString())
         window.location.reload(true)
     } catch (error) {
-        document.getElementById("user-message").innerHTML = "Oops, Start over again, Please connect your wallet before claiming tokens";
+        document.getElementById("user-message").innerHTML = "Connect wallet First";
         setTimeout(window.location.reload(true), 3000);   
     }
 } 
@@ -45,6 +45,7 @@ async function claimNFT() {
         await nftContract.connect(signer).mint(window.totalNFTScore.toString())
         window.location.reload(true)
     } catch (error) {
-        document.getElementById("user-message").innerHTML = "Oops, Start over again, Please connect your wallet before claiming NFTs";
+        document.getElementById("user-message").innerHTML = "Connect wallet First";
+        setTimeout(window.location.reload(true), 3000);
     }
 } 
