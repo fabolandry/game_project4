@@ -30,6 +30,7 @@ async function claimTokens() {
         window.location.reload(true)
     } catch (error) {
         document.getElementById("user-message").innerHTML = "Oops, Start over again, Please connect your wallet before claiming tokens";
+        setTimeout(window.location.reload(true), 3000);   
     }
 } 
 
