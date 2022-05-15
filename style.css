@@ -9,6 +9,7 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    background-image: url(./imgs/background.jpg);
   }
   
   .game {
@@ -22,6 +23,7 @@
   }
   
   .nftTotalScore {
+    color: white;
     position: absolute;
     font-size: 3vmin;
     right: 30vmin;
@@ -29,6 +31,7 @@
   }
   
   .gweiTotalScore {
+    color: white;
     position: absolute;
     font-size: 3vmin;
     right: 30vmin;
@@ -36,6 +39,7 @@
   }
   
   .score {
+    color: white;
     position: absolute;
     font-size: 3vmin;
     right: 1vmin;
@@ -65,6 +69,7 @@
   
   
   .score1 {
+    color: white;
     position: absolute;
     font-size: 3vmin;
     right: 1vmin;
@@ -73,6 +78,7 @@
   
   
   .start-screen {
+    color: white;
     position: absolute;
     font-size: 5vmin;
     top: 50%;
@@ -110,6 +116,6 @@
   .nft {
     position: absolute;
     left: calc(var(--left) * 1%);
-    height: 30%;
+    height: 20%;
     bottom: 100px;
   }
